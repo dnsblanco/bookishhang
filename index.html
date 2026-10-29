@@ -120,6 +120,8 @@
             font-size: 24px;
         }
 
+        .reviewer-name { font-weight: bold; }
+
         .headshot:hover {
             transform: scale(1.1);
         }
@@ -238,7 +240,8 @@
                                     ? `<span class="reviewer-icon" role="img" aria-label="${name}">${config.icon}</span>`
                                     : `<img src="${config.img}" alt="${name}" class="headshot">`}
                             </a>
-                        </div> 
+                            <span class="reviewer-name">${name}</span>
+                        </div>
                         <span class="stars">${renderStars(score)}</span>
                     </div>
                 `;

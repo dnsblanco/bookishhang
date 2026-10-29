@@ -111,6 +111,15 @@
             transition: transform 0.2s;
         }
 
+        .reviewer-icon {
+            width: 30px;
+            height: 30px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+
         .headshot:hover {
             transform: scale(1.1);
         }
@@ -150,7 +159,7 @@
         // --- 2. CONFIGURE REVIEWERS HERE ---
         const reviewers = {
             "Denny": {
-                img: "https://images.gr-assets.com/users/1765322314p6/17181834.jpg", 
+                icon: "🥭",
                 link: "https://www.goodreads.com/user/show/17181834-denny"
             },
             "Niels": {
@@ -158,7 +167,7 @@
                 link: "https://www.goodreads.com/user/show/123916193-niels-joaquin"
             },
             "Ben": {
-                img: "https://img.freepik.com/free-psd/vibrant-peach-with-leaf-detailed-colored-pencil-drawing_191095-77992.jpg?semt=ais_se_enriched&w=740&q=80",
+                icon: "🍑",
                 link: "https://www.goodreads.com/user/show/9052633-ben"
             }
         };
@@ -225,7 +234,9 @@
                     <div class="rating-row">
                         <div class="reviewer-info">
                             <a href="${config.link}" target="_blank" title="${name}'s Profile">
-                                <img src="${config.img}" alt="${name}" class="headshot">
+                                ${config.icon
+                                    ? `<span class="reviewer-icon" role="img" aria-label="${name}">${config.icon}</span>`
+                                    : `<img src="${config.img}" alt="${name}" class="headshot">`}
                             </a>
                         </div> 
                         <span class="stars">${renderStars(score)}</span>

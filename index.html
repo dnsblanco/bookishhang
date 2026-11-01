@@ -165,6 +165,14 @@
             display: block;
         }
 
+        .photo-strip figure.wide {
+            grid-column: 1 / -1;
+        }
+
+        .photo-strip figure.wide img {
+            aspect-ratio: auto;
+        }
+
         .photo-strip figcaption {
             font-size: 0.85rem;
             color: #666;
@@ -184,10 +192,14 @@
 
     <header>
         <h1>📚 Bookish Hang</h1>
-        <p>Searching for the secrets of the universe.</p>
+        <p>A trio of readers searching for the secrets of the universe</p>
     </header>
 
     <section class="photo-strip">
+        <figure class="wide">
+            <img src="images/poetry-night.jpg" alt="Friends gathered around a dining table with books, wine and ice cream while one reads aloud from a clipboard" loading="lazy">
+            <figcaption>Poetry Night<span class="photo-date">Mar 2023</span></figcaption>
+        </figure>
         <figure>
             <img src="images/park-hang.jpg" alt="Two friends at a park hang with drinks and snacks beside a bed of black-eyed Susans" loading="lazy">
             <figcaption>Bloody Meridians at Cobble Hill Park<span class="photo-date">Jul 2023</span></figcaption>
